@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Blue gradient */
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-direction: row;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 16px;
+      width: 900px;
+      max-width: 95%;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .left-panel {
+      flex: 1;
+      padding-right: 30px;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .left-panel h1 {
+      font-size: 2.5em;
+      color: #90CAF9;
+      margin-bottom: 20px;
+    }
+
+    .left-panel p {
+      font-size: 1.1em;
+      margin: 10px 0;
+      color: #E3F2FD;
+    }
+
+    .left-panel a {
+      color: #64B5F6;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .right-panel {
+      flex: 1;
+      padding-left: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .right-panel input,
+    .right-panel textarea {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #64B5F6;
+      border-radius: 8px;
+      padding: 12px;
+      color: #fff;
+      font-size: 1em;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .right-panel input::placeholder,
+    .right-panel textarea::placeholder {
+      color: #BBDEFB;
+    }
+
+    .right-panel textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    .right-panel button {
+      background-color: #42A5F5;
+      border: none;
+      color: #ffffff;
+      font-size: 1.1em;
+      font-weight: bold;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      align-self: flex-start;
+      transition: 0.3s;
+    }
+
+    .right-panel button:hover {
+      background-color: #64B5F6;
+    }
+
+    @media (max-width: 768px) {
+      .contact-container {
+        flex-direction: column;
+        padding: 30px;
+      }
+      .left-panel {
+        padding-right: 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+      .right-panel {
+        padding-left: 0;
+      }
+    }
+  </style>
+  <script>
+    function showMessage() {
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      if (email && message) {
+        alert("Thank you for contacting us! We will respond as soon as possible.");
+      } else {
+        alert("Please fill in all fields before submitting.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="contact-container">
+    <div class="left-panel">
+      <h1>Contact Us</h1>
+    </div>
+    <div class="right-panel">
+      <input type="email" id="email" placeholder="Input Email" required />
+      <textarea id="message" placeholder="Input Message" required></textarea>
+      <button onclick="showMessage()">Send Message</button>
+    </div>
+  </div>
+</body>
+</html>
