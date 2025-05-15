@@ -1,4 +1,4 @@
 {
 "admob_banner":"ca-app-pub-2299291161271404/2582588817",
-"appid_openads":"aHR0cHM6Ly9wYXp1bWEuc3BhY2U="
+"appid_openads":"hfdgjkdh"
 }
